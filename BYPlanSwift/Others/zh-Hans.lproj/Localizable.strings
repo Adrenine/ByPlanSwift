@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BYPlanSwift
+
+  Created by Kystar's Mac Book Pro on 2021/1/19.
+  
+*/
+"Home_page" = "主页";
+"Clock_page" = "计时";
+"Record_page" = "记录";
+"Add_page" = "新增";
+"Report_page" = "报告";
+"Mine_page" = "我的";

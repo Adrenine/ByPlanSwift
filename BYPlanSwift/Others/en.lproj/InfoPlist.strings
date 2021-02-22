@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  BYPlanSwift
+
+  Created by Kystar's Mac Book Pro on 2021/2/22.
+  
+*/
+// Localizable App Name是App在英语环境环境下显示的名称
+CFBundleDisplayName = "Boil Plan";
