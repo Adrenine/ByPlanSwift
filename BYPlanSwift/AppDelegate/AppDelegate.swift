@@ -44,8 +44,9 @@ extension AppDelegate {
     }
     
     func pageSetting() {
-        self.tabBarVC = baseTabBarController()
-        self.window?.rootViewController = self.tabBarVC
+//        self.tabBarVC = baseTabBarController()
+//        self.window?.rootViewController = self.tabBarVC
+        self.window?.rootViewController = TabBarController(viewControllers: TabBarController.viewControllersForTabBar(), tabBarItemsAttributes: TabBarController.tabBarItemsAttributesForTabBar())
         self.window?.makeKeyAndVisible()
     }
     
@@ -76,66 +77,66 @@ extension AppDelegate {
     }
 }
 
-extension AppDelegate: UITabBarControllerDelegate {
-    func baseTabBarController() -> ESTabBarController {
-        let tabBarController = ESTabBarController()
-        tabBarController.delegate = self
-        tabBarController.tabBar.shadowImage = R.image.tab_transparent()
-        tabBarController.tabBar.backgroundImage = R.image.tab_background_dark()
-        tabBarController.shouldHijackHandler = {
-            tabbarController, viewController, index in
-            if index == 2 {
-                return true
-            }
-            return false
-        }
-        tabBarController.didHijackHandler = {
-            [weak tabBarController] tabbarController, viewController, index in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
-                let takePhotoAction = UIAlertAction(title: "Take a photo", style: .default, handler: nil)
-                alertController.addAction(takePhotoAction)
-                let selectFromAlbumAction = UIAlertAction(title: "Select from album", style: .default, handler: nil)
-                alertController.addAction(selectFromAlbumAction)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                alertController.addAction(cancelAction)
-                tabBarController?.present(alertController, animated: true, completion: nil)
-            }
-        }
-
-        let clockVCTitle = R.string.localizable.clock_page()
-        let recordVCTitle = R.string.localizable.record_page()
-        let reportVCTitle = R.string.localizable.report_page()
-        let mineVCTitle = R.string.localizable.mine_page()
-        
-        let clockVC = BYClockViewController()
-        let recordVC = BYRecordViewController()
-        let addVC = BYAddViewController()
-        let reportVC = BYFavorViewController()
-        let mineVC = BYMineViewController()
-        
-        clockVC.title = clockVCTitle
-        recordVC.title = recordVCTitle
-        reportVC.title = reportVCTitle
-        mineVC.title = mineVCTitle
-        
-        clockVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: clockVCTitle, image: R.image.tab_clock(), selectedImage: R.image.tab_clock_sel())
-        recordVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: recordVCTitle, image: R.image.tab_record(), selectedImage: R.image.tab_record_sel())
-        addVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: R.image.tab_add(), selectedImage: R.image.tab_add_sel())
-        reportVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: reportVCTitle, image: R.image.tab_report(), selectedImage: R.image.tab_report_sel())
-        mineVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: mineVCTitle, image: R.image.tab_me(), selectedImage: R.image.tab_me_sel())
-        
-        let nav1 = BaseNavigationController.init(rootViewController: clockVC)
-        let nav2 = BaseNavigationController.init(rootViewController: recordVC)
-        let nav3 = BaseNavigationController.init(rootViewController: addVC)
-        let nav4 = BaseNavigationController.init(rootViewController: reportVC)
-        let nav5 = BaseNavigationController.init(rootViewController: mineVC)
-        
-        tabBarController.viewControllers = [nav1, nav2, nav3, nav4, nav5]
-        
-        return tabBarController
-    }
-}
+//extension AppDelegate: UITabBarControllerDelegate {
+//    func baseTabBarController() -> ESTabBarController {
+//        let tabBarController = ESTabBarController()
+//        tabBarController.delegate = self
+//        tabBarController.tabBar.shadowImage = R.image.tab_transparent()
+//        tabBarController.tabBar.backgroundImage = R.image.tab_background_dark()
+//        tabBarController.shouldHijackHandler = {
+//            tabbarController, viewController, index in
+//            if index == 2 {
+//                return true
+//            }
+//            return false
+//        }
+//        tabBarController.didHijackHandler = {
+//            [weak tabBarController] tabbarController, viewController, index in
+//
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: .actionSheet)
+//                let takePhotoAction = UIAlertAction(title: "Take a photo", style: .default, handler: nil)
+//                alertController.addAction(takePhotoAction)
+//                let selectFromAlbumAction = UIAlertAction(title: "Select from album", style: .default, handler: nil)
+//                alertController.addAction(selectFromAlbumAction)
+//                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//                alertController.addAction(cancelAction)
+//                tabBarController?.present(alertController, animated: true, completion: nil)
+//            }
+//        }
+//
+//        let clockVCTitle = R.string.localizable.clock_page()
+//        let recordVCTitle = R.string.localizable.record_page()
+//        let reportVCTitle = R.string.localizable.report_page()
+//        let mineVCTitle = R.string.localizable.mine_page()
+//
+//        let clockVC = BYClockViewController()
+//        let recordVC = BYRecordViewController()
+//        let addVC = BYAddViewController()
+//        let reportVC = BYFavorViewController()
+//        let mineVC = BYMineViewController()
+//
+//        clockVC.title = clockVCTitle
+//        recordVC.title = recordVCTitle
+//        reportVC.title = reportVCTitle
+//        mineVC.title = mineVCTitle
+//
+//        clockVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: clockVCTitle, image: R.image.tab_clock(), selectedImage: R.image.tab_clock_sel())
+//        recordVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: recordVCTitle, image: R.image.tab_record(), selectedImage: R.image.tab_record_sel())
+//        addVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityContentView(), title: nil, image: R.image.tab_add(), selectedImage: R.image.tab_add_sel())
+//        reportVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: reportVCTitle, image: R.image.tab_report(), selectedImage: R.image.tab_report_sel())
+//        mineVC.tabBarItem = ESTabBarItem.init(ExampleIrregularityBasicContentView(), title: mineVCTitle, image: R.image.tab_me(), selectedImage: R.image.tab_me_sel())
+//
+//        let nav1 = BaseNavigationController.init(rootViewController: clockVC)
+//        let nav2 = BaseNavigationController.init(rootViewController: recordVC)
+//        let nav3 = BaseNavigationController.init(rootViewController: addVC)
+//        let nav4 = BaseNavigationController.init(rootViewController: reportVC)
+//        let nav5 = BaseNavigationController.init(rootViewController: mineVC)
+//
+//        tabBarController.viewControllers = [nav1, nav2, nav3, nav4, nav5]
+//
+//        return tabBarController
+//    }
+//}
 
 

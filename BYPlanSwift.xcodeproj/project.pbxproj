@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4207D7420B5FDA72727198BF /* Pods_BYPlanSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56CD56466A0C6BED4180DB27 /* Pods_BYPlanSwift.framework */; };
+		A40DE1E025E646780072313F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DE1DF25E646780072313F /* TabBarController.swift */; };
+		A486348325E65BB7007CD643 /* TabBarPlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A486348225E65BB7007CD643 /* TabBarPlusButton.swift */; };
 		EA08677225AE9EC200175977 /* BYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08677125AE9EC200175977 /* BYTabBarController.swift */; };
 		EA08679E25B6C3D300175977 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA08679D25B6C3D300175977 /* BaseTabBarController.swift */; };
 		EA0867AA25B6D1C300175977 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0867AC25B6D1C300175977 /* Localizable.strings */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		56CD56466A0C6BED4180DB27 /* Pods_BYPlanSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BYPlanSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9257867454C679AFBF2D5EA9 /* Pods-BYPlanSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BYPlanSwift.debug.xcconfig"; path = "Target Support Files/Pods-BYPlanSwift/Pods-BYPlanSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		A40DE1DF25E646780072313F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A486348225E65BB7007CD643 /* TabBarPlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPlusButton.swift; sourceTree = "<group>"; };
 		EA08677125AE9EC200175977 /* BYTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYTabBarController.swift; sourceTree = "<group>"; };
 		EA08679D25B6C3D300175977 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		EA0867A425B6D16100175977 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				EA08679D25B6C3D300175977 /* BaseTabBarController.swift */,
+				A40DE1DF25E646780072313F /* TabBarController.swift */,
+				A486348225E65BB7007CD643 /* TabBarPlusButton.swift */,
 			);
 			path = BaseTabBarController;
 			sourceTree = "<group>";
@@ -784,6 +790,7 @@
 				EA08677225AE9EC200175977 /* BYTabBarController.swift in Sources */,
 				EAC6B0E325DFAB2C00114E0B /* ExampleHighlightableContentView.swift in Sources */,
 				EACC779F25AC4A0E00FD2DB9 /* BYClockViewController.swift in Sources */,
+				A486348325E65BB7007CD643 /* TabBarPlusButton.swift in Sources */,
 				EABA995025ABFFB0000F7527 /* AppDelegate.swift in Sources */,
 				EA0867EF25B7D8BF00175977 /* ColorDefine.swift in Sources */,
 				EABA99A325AC28A6000F7527 /* AppNotification.swift in Sources */,
@@ -808,6 +815,7 @@
 				EABA99AC25AC28A6000F7527 /* UIColorExtension.swift in Sources */,
 				EA0867D725B6DF1F00175977 /* BaseProject.swift in Sources */,
 				EABA99AE25AC28A6000F7527 /* UIViewControllerExtension.swift in Sources */,
+				A40DE1E025E646780072313F /* TabBarController.swift in Sources */,
 				EAC6B0E425DFAB2C00114E0B /* ExampleBackgroundContentView.swift in Sources */,
 				EABA99AD25AC28A6000F7527 /* ArrayExtension.swift in Sources */,
 				EAC6B11F25E3957300114E0B /* BYRecordViewController.swift in Sources */,

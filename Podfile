@@ -14,5 +14,6 @@ target 'BYPlanSwift' do
   pod 'YYKit'
   pod 'pop'
   pod 'ESTabBarController-swift'
+  pod 'CYLTabBarController'
   
 end

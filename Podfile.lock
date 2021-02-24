@@ -1,4 +1,7 @@
 PODS:
+  - CYLTabBarController (1.29.0):
+    - CYLTabBarController/Core (= 1.29.0)
+  - CYLTabBarController/Core (1.29.0)
   - ESTabBarController-swift (2.8.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
@@ -43,6 +46,7 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - CYLTabBarController
   - ESTabBarController-swift
   - FMDB
   - IQKeyboardManagerSwift
@@ -56,6 +60,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - CYLTabBarController
     - ESTabBarController-swift
     - FMDB
     - IQKeyboardManagerSwift
@@ -69,6 +74,7 @@ SPEC REPOS:
     - YYKit
 
 SPEC CHECKSUMS:
+  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 491cf29cce816bc12fe8cd72b444a0c8a1191cd6
+PODFILE CHECKSUM: eceb4b4054f773f2166690448cd1ee19d1dbadea
 
 COCOAPODS: 1.10.0
