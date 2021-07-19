@@ -114,8 +114,18 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 20 images.
+  /// This `R.image` struct is generated, and contains static references to 30 images.
   struct image {
+    /// Image `buy`.
+    static let buy = Rswift.ImageResource(bundle: R.hostingBundle, name: "buy")
+    /// Image `cross2`.
+    static let cross2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "cross2")
+    /// Image `cross`.
+    static let cross = Rswift.ImageResource(bundle: R.hostingBundle, name: "cross")
+    /// Image `favourite`.
+    static let favourite = Rswift.ImageResource(bundle: R.hostingBundle, name: "favourite")
+    /// Image `home`.
+    static let home = Rswift.ImageResource(bundle: R.hostingBundle, name: "home")
     /// Image `icon_back`.
     static let icon_back = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_back")
     /// Image `icon_close_hover`.
@@ -126,6 +136,10 @@ struct R: Rswift.Validatable {
     static let icon_close_pre = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_close_pre")
     /// Image `icon_info`.
     static let icon_info = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_info")
+    /// Image `plus`.
+    static let plus = Rswift.ImageResource(bundle: R.hostingBundle, name: "plus")
+    /// Image `search`.
+    static let search = Rswift.ImageResource(bundle: R.hostingBundle, name: "search")
     /// Image `tab_add_sel`.
     static let tab_add_sel = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_add_sel")
     /// Image `tab_add`.
@@ -134,6 +148,10 @@ struct R: Rswift.Validatable {
     static let tab_background_dark = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_background_dark")
     /// Image `tab_background`.
     static let tab_background = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_background")
+    /// Image `tab_cancel_sel`.
+    static let tab_cancel_sel = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_cancel_sel")
+    /// Image `tab_cancel`.
+    static let tab_cancel = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_cancel")
     /// Image `tab_clock_sel`.
     static let tab_clock_sel = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_clock_sel")
     /// Image `tab_clock`.
@@ -156,6 +174,43 @@ struct R: Rswift.Validatable {
     static let tab_report = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_report")
     /// Image `tab_transparent`.
     static let tab_transparent = Rswift.ImageResource(bundle: R.hostingBundle, name: "tab_transparent")
+    /// Image `user`.
+    static let user = Rswift.ImageResource(bundle: R.hostingBundle, name: "user")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "buy", bundle: ..., traitCollection: ...)`
+    static func buy(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.buy, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "cross", bundle: ..., traitCollection: ...)`
+    static func cross(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cross, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "cross2", bundle: ..., traitCollection: ...)`
+    static func cross2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.cross2, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "favourite", bundle: ..., traitCollection: ...)`
+    static func favourite(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.favourite, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "home", bundle: ..., traitCollection: ...)`
+    static func home(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "icon_back", bundle: ..., traitCollection: ...)`
@@ -193,6 +248,20 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "plus", bundle: ..., traitCollection: ...)`
+    static func plus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.plus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "search", bundle: ..., traitCollection: ...)`
+    static func search(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.search, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "tab_add", bundle: ..., traitCollection: ...)`
     static func tab_add(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tab_add, compatibleWith: traitCollection)
@@ -217,6 +286,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "tab_background_dark", bundle: ..., traitCollection: ...)`
     static func tab_background_dark(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tab_background_dark, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab_cancel", bundle: ..., traitCollection: ...)`
+    static func tab_cancel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_cancel, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tab_cancel_sel", bundle: ..., traitCollection: ...)`
+    static func tab_cancel_sel(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tab_cancel_sel, compatibleWith: traitCollection)
     }
     #endif
 
@@ -294,6 +377,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "tab_transparent", bundle: ..., traitCollection: ...)`
     static func tab_transparent(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.tab_transparent, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "user", bundle: ..., traitCollection: ...)`
+    static func user(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.user, compatibleWith: traitCollection)
     }
     #endif
 

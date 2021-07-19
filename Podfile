@@ -1,7 +1,7 @@
 platform:ios, '10.0'
 
 use_frameworks!
-
+source 'https://cdn.cocoapods.org/'
 target 'BYPlanSwift' do
 
   pod 'SnapKit'
@@ -15,5 +15,8 @@ target 'BYPlanSwift' do
   pod 'pop'
   pod 'ESTabBarController-swift'
   pod 'CYLTabBarController'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxDataSources'
   
 end

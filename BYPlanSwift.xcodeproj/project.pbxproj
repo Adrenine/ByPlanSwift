@@ -17,6 +17,8 @@
 		EA0867D125B6D89F00175977 /* BYMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0867D025B6D89F00175977 /* BYMineViewController.swift */; };
 		EA0867D725B6DF1F00175977 /* BaseProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0867D625B6DF1F00175977 /* BaseProject.swift */; };
 		EA0867EF25B7D8BF00175977 /* ColorDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0867EE25B7D8BF00175977 /* ColorDefine.swift */; };
+		EA436E5A25E8E8AD004CF4D7 /* BYButtonPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA436E5925E8E8AD004CF4D7 /* BYButtonPopMenu.swift */; };
+		EA455CBA26A51BB800AF3484 /* IGCMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EA455CB926A51BB800AF3484 /* IGCMenu.m */; };
 		EABA995025ABFFB0000F7527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABA994F25ABFFB0000F7527 /* AppDelegate.swift */; };
 		EABA995725ABFFB0000F7527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABA995525ABFFB0000F7527 /* Main.storyboard */; };
 		EABA995925ABFFB3000F7527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EABA995825ABFFB3000F7527 /* Assets.xcassets */; };
@@ -71,6 +73,9 @@
 		EA0867D025B6D89F00175977 /* BYMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYMineViewController.swift; sourceTree = "<group>"; };
 		EA0867D625B6DF1F00175977 /* BaseProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProject.swift; sourceTree = "<group>"; };
 		EA0867EE25B7D8BF00175977 /* ColorDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDefine.swift; sourceTree = "<group>"; };
+		EA436E5925E8E8AD004CF4D7 /* BYButtonPopMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYButtonPopMenu.swift; sourceTree = "<group>"; };
+		EA455CB826A51BB800AF3484 /* IGCMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCMenu.h; sourceTree = "<group>"; };
+		EA455CB926A51BB800AF3484 /* IGCMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCMenu.m; sourceTree = "<group>"; };
 		EABA994C25ABFFB0000F7527 /* BYPlanSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BYPlanSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABA994F25ABFFB0000F7527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABA995625ABFFB0000F7527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -200,6 +205,23 @@
 			children = (
 			);
 			path = Device;
+			sourceTree = "<group>";
+		};
+		EA436E5825E8E88C004CF4D7 /* BYButtonPopMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA436E5925E8E8AD004CF4D7 /* BYButtonPopMenu.swift */,
+			);
+			path = BYButtonPopMenu;
+			sourceTree = "<group>";
+		};
+		EA455CB726A51BB800AF3484 /* IGCMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EA455CB826A51BB800AF3484 /* IGCMenu.h */,
+				EA455CB926A51BB800AF3484 /* IGCMenu.m */,
+			);
+			path = IGCMenu;
 			sourceTree = "<group>";
 		};
 		EA79703425DFA19E00532ED8 /* ESTabBarContentView */ = {
@@ -341,6 +363,7 @@
 		EABA999125AC28A6000F7527 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				EA436E5825E8E88C004CF4D7 /* BYButtonPopMenu */,
 				EABA999225AC28A6000F7527 /* BYProgressHUD */,
 				EABA999425AC28A6000F7527 /* BYWebView */,
 				EABA999625AC28A6000F7527 /* BYAlertView */,
@@ -631,6 +654,7 @@
 		EAF3DDFF25C8F58D0059BF87 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				EA455CB726A51BB800AF3484 /* IGCMenu */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -803,6 +827,7 @@
 				EABA99B225AC28A6000F7527 /* DictionaryExtension.swift in Sources */,
 				EACC77B125AC4AEA00FD2DB9 /* R.generated.swift in Sources */,
 				EABA99B325AC28A6000F7527 /* StringDefine.swift in Sources */,
+				EA455CBA26A51BB800AF3484 /* IGCMenu.m in Sources */,
 				EAC6B0E825DFAB2C00114E0B /* ExampleBouncesContentView.swift in Sources */,
 				EAC6B0E725DFAB2C00114E0B /* ExampleTipsContentView.swift in Sources */,
 				EABA99B025AC28A6000F7527 /* DispatchQueueExtension.swift in Sources */,
@@ -820,6 +845,7 @@
 				EABA99AD25AC28A6000F7527 /* ArrayExtension.swift in Sources */,
 				EAC6B11F25E3957300114E0B /* BYRecordViewController.swift in Sources */,
 				EABA99B525AC28A6000F7527 /* BYAppStatus.swift in Sources */,
+				EA436E5A25E8E8AD004CF4D7 /* BYButtonPopMenu.swift in Sources */,
 				EABA99B725AC28A6000F7527 /* BYWebViewViewController.swift in Sources */,
 				EABA99CE25AC3349000F7527 /* BYBaseDatabaseManager.m in Sources */,
 			);

@@ -5,12 +5,11 @@
       "scale" : "1x"
     },
     {
-      "filename" : "add to.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "add to (1).png",
+      "filename" : "buy@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

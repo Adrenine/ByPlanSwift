@@ -9,5 +9,6 @@
 #define BYPlanSwift_Bridging_Header_h
 
 #import "BYBaseDatabaseManager.h"
+#import "IGCMenu.h"
 
 #endif /* BYPlanSwift_Bridging_Header_h */
