@@ -64,8 +64,9 @@
         }
         newFrame.size = CGSizeMake(menuButtonSize, menuButtonSize);
         menuButton.frame = newFrame;
-        
-        menuButton.center = self.showMenuButton.center;
+        CGRect rect = [self.showMenuButton.superview convertRect:self.showMenuButton.frame toView:self.showMenuButtonSuperView];
+        CGPoint center = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+        menuButton.center = center;
         menuButton.layer.cornerRadius = menuButton.frame.size.height / 2;
         menuButton.layer.masksToBounds = YES;
         menuButton.layer.opacity = 0.0;
@@ -198,11 +199,13 @@
         for (int i = 0; i < self.menuButtonArray.count; i++) {
             UIButton *menuButton = [self.menuButtonArray objectAtIndex:i];
             menuButton.layer.opacity = 0.0;
-            menuButton.center = self.showMenuButton.center;
+            CGRect rect = [self.showMenuButton.superview convertRect:self.showMenuButton.frame toView:self.showMenuButtonSuperView];
+            CGPoint center = CGPointMake(CGRectGetMidX(rect), CGRectGetMidY(rect));
+            menuButton.center = center;
             if (self.menuNameLabelArray.count > i) {
                 UILabel *menuNameLabel = (UILabel *)[self.menuNameLabelArray objectAtIndex:i];
                 menuNameLabel.layer.opacity = 0.0;
-                menuNameLabel.center = self.showMenuButton.center;
+                menuNameLabel.center = center;
                 self.showMenuButtonSuperView.layer.opacity = 0.0;
             }
         }
